@@ -1,0 +1,133 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin:0;
+    padding: 0;
+    color: black;
+}
+h1{
+    text-align: center;
+}
+ 
+section{
+    padding: 50px 20px;
+}
+ 
+ 
+.section1{
+    background: linear-gradient(to bottom, #6a11cb, #2575fc); /* Fondo degradado */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+ 
+.section{
+    text-align: center;
+    background-color: #81adff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav{
+    background-color: #6a11cb; /* Fondo degradado */
+    color: rgb(223, 209, 209);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    position: fixed; /* Hace que la barra de navegación sea fija */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px white (55, 255, 255, 0);
+}
+nav .logo{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+ 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ 
+nav ul li {
+    position: relative;
+}
+ 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+ 
+nav ul li a:hover {
+   background-color: #334c77;
+   color: white;
+}
+ 
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: #02baf18c; /* Color de fondo del submenú */
+    top: 100%;
+    left: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 5px;
+ 
+}
+ 
+.submenu li a{
+    padding: 0.5em 1em;
+    text-align: left;
+    color: rgb(168, 0, 140);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+ 
+}
+ 
+.submenu li a:hover{
+   background-color: hsl(269, 100%, 51%);
+ 
+}
+ 
+nav ul li:hover .submenu{
+    display: block;
+}
+ 
+.menu-icon{
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+ 
+#nav-toggle{
+    display: none;
+}
+ 
+ 
+@media (max-width: 768px) {
+    nav ul {
+      display: none; /* Oculta el menú por defecto */
+      flex-direction: column;
+      width: 100%;
+      background-color: #93d6f8;
+    }
+ 
+    nav ul li a {
+      padding: 1em;
+      text-align: center;
+    }
+ 
+    #nav-toggle:checked + ul {
+      display: flex; /* Muestra el menú al activar el checkbox */
+    }
+ 
+    .menu-icon {
+      display: block; /* Muestra el ícono en pantallas pequeñas */
+    }
+  }
+ 
