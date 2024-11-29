@@ -1,133 +1,130 @@
-body{
-    font-family: 'Courier New', Courier, monospace;
-    margin:0;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
     padding: 0;
-    color: black;
+    color: #333;
 }
-h1{
-    text-align: center;
-}
- 
-section{
-    padding: 50px 20px;
-}
- 
- 
-.section1{
-    background: linear-gradient(to bottom, #6a11cb, #2575fc); /* Fondo degradado */
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
- 
-.section{
-    text-align: center;
-    background-color: #81adff;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-nav{
-    background-color: #6a11cb; /* Fondo degradado */
-    color: rgb(223, 209, 209);
+header {
+    background: #0056d6;
+    color: #fff;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 1em;
-    position: fixed; /* Hace que la barra de navegación sea fija */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 8px white (55, 255, 255, 0);
 }
-nav .logo{
-    font-size: 1.5em;
+ 
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
 }
  
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+header nav a:hover {
+    text-decoration: underline;
 }
  
-nav ul li {
+/* Hero Section */
+.hero {
     position: relative;
-}
- 
-nav ul li a {
+    text-align: center;
     color: white;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(0, 86, 214, 0.8), rgba(0, 86, 214, 0.5)), url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+ 
+.hero-content {
+    z-index: 2;
+}
+ 
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+ 
+.hero-btn {
+    background: white;
+    color: #0056d6;
+    padding: 10px 20px;
     text-decoration: none;
-    padding: 0.5em 1em;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
-}
- 
-nav ul li a:hover {
-   background-color: #334c77;
-   color: white;
-}
- 
-.submenu{
-    display: none;
-    position: absolute;
-    background-color: #02baf18c; /* Color de fondo del submenú */
-    top: 100%;
-    left: 0;
-    padding: 0;
-    list-style: none;
+    font-weight: bold;
     border-radius: 5px;
- 
+    transition: 0.3s ease;
 }
  
-.submenu li a{
-    padding: 0.5em 1em;
-    text-align: left;
-    color: rgb(168, 0, 140);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
- 
+.hero-btn:hover {
+    background: #003c99;
+    color: white;
 }
  
-.submenu li a:hover{
-   background-color: hsl(269, 100%, 51%);
- 
+/* Products Section */
+.products {
+    background: #f9f9f9;
+    padding: 40px;
+    text-align: center;
 }
  
-nav ul li:hover .submenu{
-    display: block;
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
  
-.menu-icon{
-    display: none;
-    font-size: 1.5em;
+.product {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+ 
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+ 
+.product button {
+    background: #0056d6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
  
-#nav-toggle{
-    display: none;
-}
- 
- 
-@media (max-width: 768px) {
-    nav ul {
-      display: none; /* Oculta el menú por defecto */
-      flex-direction: column;
-      width: 100%;
-      background-color: #93d6f8;
-    }
- 
-    nav ul li a {
-      padding: 1em;
-      text-align: center;
-    }
- 
-    #nav-toggle:checked + ul {
-      display: flex; /* Muestra el menú al activar el checkbox */
-    }
- 
-    .menu-icon {
-      display: block; /* Muestra el ícono en pantallas pequeñas */
-    }
+.product button:hover {
+    background: #003c99;
   }
  
+/* Features Section */
+.features {
+    padding: 40px;
+    background: #fff;
+    text-align: center;
+}
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+ 
+.feature {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+ 
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
